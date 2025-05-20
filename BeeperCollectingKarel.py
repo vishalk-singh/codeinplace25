@@ -5,9 +5,7 @@ The BeeperCollectingKarel class collects all the beepers
 in a series of vertical towers and deposits them at the
 eastmost corner on 1st row.
 """
-# import functions from other files
-# importing Super Karel that has many abilities and functions.
-from StepUpKarel import move_safely
+# import functions from other files.
 from karel.stanfordkarel import *
 
 
@@ -21,12 +19,13 @@ def main():
     put_all_beepers()
 
 # Clear all towers in Karel's world.'
+# Move till front is clear and clear tower upward and downward.
+# repeat until front is not clear.
 def clear_all_towers():
     while front_is_clear():
         clear_tower_upward()
         move()
         clear_tower_downward()
-        move_safely() # This function is defined in StepUpKarel.py.
 
 # Put all beepers in Karel's bag. For this program, we assume that karel has not infinite number of beepers,
 # there is enough space in Karel's bag to hold all the beepers.
